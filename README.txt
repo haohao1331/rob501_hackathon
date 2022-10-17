@@ -4,12 +4,36 @@
 
 [link to autolab](https://courses.medula.ca/courses/ROB501-F22/assessments/hackathon)
 
+
+ROB501 Hackathon - Panoramas
+Team: Yannis He, Kelvin Cui, Leo Li, Maxwell Zheng.
+
+1. Code Structure
+Code Structure is as follow:
 .
 ├── mosaic_images.py
 ├── panorama.py
 └── undo_vignetting.py
+where panorama.py calls mosaic_images.py and undo_vignetting.py
 
-Team: Yannis He, Kelvin Cui, Leo Li, Maxwell Zheng.
+2. Workflow
+Panorama
+  -> rectangular_image = mosaic_images(list of images)
+  -> output = undo_vignetting(rectangular_image)
+3. Algorithm
+a) mosaic_images:
+  1. find the anchor_image (image1)
+  2. for rest of the image in the list:
+       - feature_mapping between anchor and next_image using FLANN
+       - new_anchor_image = world_perspective(anchor,next_image, RANSAC flag)
+       - anchor = new_anchor
+b) world_perspective: 
+  1. an opencv function that takes in 2 images, feature_matches using RANSAC
+  
+
+   
+    
+
 
 The file 
 A short but organized document that outlines your solution approach and enables the teaching team to
