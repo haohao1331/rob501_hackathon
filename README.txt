@@ -32,9 +32,10 @@ b) world_perspective:
   
 c) undo_vignetting: 
   1. get Gaussian map from the center of the image 
-  2. invert the Gaussian map
-  3. normalize the output
-  3. output image
+  2. invert gaussian map
+  4. multiply image by map
+  4. normalize the output
+  5. output image
   input: 
     img: str
         image path
