@@ -24,7 +24,7 @@ Panorama
 a) mosaic_images:
   1. find the anchor_image (image1)
   2. for rest of the image in the list:
-       - feature_mapping between anchor and next_image using FLANN
+       - feature_mapping between anchor and next_image using Bruteforce
        - new_anchor_image = world_perspective(anchor,next_image, RANSAC flag)
        - anchor = new_anchor
     output_1 = anchor
