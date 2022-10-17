@@ -56,10 +56,3 @@ c) undo_vworld_perspectiveignetting:
     a numpy array with undo_vignetting
   
 
-   
-    
-
-
-The file 
-A short but organized document that outlines your solution approach and enables the teaching team to
-successfully run your code offline for evaluation.
