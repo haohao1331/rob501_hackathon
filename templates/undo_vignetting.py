@@ -12,7 +12,7 @@ def undo_vignetting(img, sigma, brightness):
     sigma: float
         standard deviation for gaussian kernel as a funtion of dimension
         both dimensions use the same sigma
-        default is half the the dimension
+        default is 0.5 which is half the the dimension
     brightness: float
         increased brightness after vignette correction
         (brightness * 100)% image brightness
