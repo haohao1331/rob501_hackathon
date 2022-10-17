@@ -9,7 +9,7 @@ from histogram_eq import histogram_eq
 
 # import matplotlib.pyplot as plt
 
-def billboard_hack():
+def billboard_hack(Iyd, Ist):
     """
     Hack and replace the billboard!
 

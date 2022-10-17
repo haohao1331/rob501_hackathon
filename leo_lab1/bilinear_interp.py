@@ -33,10 +33,14 @@ def bilinear_interp(I : np.ndarray, pt : np.ndarray):
     # get needed values
     x, y = pt
     x1, x2, y1, y2 = int(np.floor(x)), int(np.ceil(x)), int(np.floor(y)), int(np.ceil(y))
+    # print(x1, x2, y1, y2)
+    # print(I.shape)
     
     # construct matrix
-    A = I[np.array([y1, y2, y1, y2]), np.array([x1, x1, x2, x2])].reshape(2, 2)
-    
+    try:
+        A = I[np.array([y1, y2, y1, y2]), np.array([x1, x1, x2, x2])].reshape(2, 2)
+    except:
+        return 0
     # get result
     b = np.array([x2-x, x-x1]).T @ A @ np.array([y2-y, y-y1])
 
