@@ -27,10 +27,15 @@ a) mosaic_images:
        - feature_mapping between anchor and next_image using FLANN
        - new_anchor_image = world_perspective(anchor,next_image, RANSAC flag)
        - anchor = new_anchor
+    output_1 = anchor
+  3. output_2 = world_perspective(output_1)
+  4. final_output = undo_vignetting(output_2)
 b) world_perspective: 
   1. an opencv function that takes in 2 images, feature_matches using RANSAC
   
-c) undo_vignetting: 
+  
+  
+c) undo_vworld_perspectiveignetting: 
   1. get Gaussian map from the center of the image 
   2. invert gaussian map
   4. multiply image by map
