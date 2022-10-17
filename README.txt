@@ -30,6 +30,25 @@ a) mosaic_images:
 b) world_perspective: 
   1. an opencv function that takes in 2 images, feature_matches using RANSAC
   
+c) undo_vignetting: 
+  1. get Gaussian map from the center of the image 
+  2. invert the Gaussian map
+  3. normalize the output
+  3. output image
+  input: 
+    img: str
+        image path
+    sigma: float
+        standard deviation for gaussian kernel as a funtion of dimension
+        both dimensions use the same sigma
+        default is half the the dimension
+    brightness: float
+        increased brightness after vignette correction
+        (brightness * 100)% image brightness
+        default is 1.3
+  output: 
+    a numpy array with undo_vignetting
+  
 
    
     
