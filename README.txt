@@ -33,9 +33,7 @@ a) mosaic_images:
 b) world_perspective: 
   1. an opencv function that takes in 2 images, feature_matches using RANSAC
   
-  
-  
-c) undo_vworld_perspectiveignetting: 
+c) undo_vignetting(image): 
   1. get Gaussian map from the center of the image 
   2. invert gaussian map
   4. multiply image by map
